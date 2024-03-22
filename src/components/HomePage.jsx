@@ -63,7 +63,7 @@ function HomePage() {
                                 </div>
                                 <span className='secondary-color fw-semibold'>{product.price} EGP</span>
                                 <section className='col-12 d-flex justify-content-between p-0'>
-                                    <a href="#" className="btn btn-dark" onClick={()=>dispatch(addProducts(product))} >ADD TO CART</a>
+                                    <a className="btn btn-dark" onClick={()=>dispatch(addProducts(product))} >ADD TO CART</a>
                                     <button className='border-0 rounded-3'>
                                         <FontAwesomeIcon className='' icon={faHeart} />
                                     </button>
