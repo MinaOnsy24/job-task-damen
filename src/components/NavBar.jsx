@@ -141,7 +141,7 @@ class NavBar extends Component {
                                                 <ul className="list-group">
                                                     {cartItemCount.map((product) => (
                                                         <li key={product.id} className="row mb-3 align-items-center">
-                                                            <img src={product.image} alt="" style={{ width: '50px', height: "50px" }} className="col-4" />
+                                                            <img src={product.image} alt="" style={{ width: '50px', height: "50px" }} className="col-4 p-0" />
                                                             <div className="col-4">
                                                                 <p className='m-0'>{product.title.substring(0, 10)}</p>
                                                                 <span className='secondary-color'>{product.price}</span> {/* Assuming you have a price property */}

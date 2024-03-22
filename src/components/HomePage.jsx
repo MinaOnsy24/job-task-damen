@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import StarsRating from '../utils/shared/StarsRating';
 import { useDispatch } from 'react-redux'
 import { addProducts } from '../utils/store/slices/Products';
+import { addfavoraite } from '../utils/store/slices/Favorite';
+
 import Loading from './Loading';
 
 function HomePage() {
@@ -69,7 +71,7 @@ function HomePage() {
                                 <section className='col-12 d-flex justify-content-between p-0'>
                                     <a className="btn btn-dark" onClick={() => dispatch(addProducts(product))} >ADD TO CART</a>
                                     <button className='border-0 rounded-3'>
-                                        <FontAwesomeIcon className='' icon={faHeart} />
+                                        <FontAwesomeIcon className='' icon={faHeart} onClick={()=>dispatch(addfavoraite(product))}/>
                                     </button>
                                 </section>
                             </div>
