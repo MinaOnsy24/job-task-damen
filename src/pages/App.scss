@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('ttf');
+    font-weight: normal;
+}
+
+//  color variables
+$primary-color: #6c757d;
+$secondary-color: #DC3545;
+
+.primary-color {
+    color: $primary-color !important;
+}
+
+.secondary-color {
+    color: $secondary-color !important;
+}
+
+* {
+    font-family: 'poppins';
+}
+
+.products section img {
+    height: 150px;
+}
+
+.products .imag {
+    position: relative;
+
+}
+
+.products .imag .showDetails {
+    position: absolute;
+    top: 0px;
+
+}
+
+.products .imag .showDetails {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    transition: opacity 0.5s ease;
+    background-color: #00000094;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.products .imag:hover .showDetails {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+.cart {
+    background-color: white;
+    position: absolute;
+    top: 59px;
+    right: -100px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 50vh;
+    z-index: 2;
+}
+
+.blackScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: #0000004d;
+    z-index: 1;
+    position: fixed;
+
+}
