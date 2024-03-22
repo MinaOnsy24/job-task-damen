@@ -93,7 +93,7 @@ class NavBar extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link" >Favorite</Link>
+                                <Link className="nav-link" to="/Favoraite">Favorite</Link>
                             </li>
 
                             <li className="nav-item">
