@@ -6,12 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fetchProducts } from '../utils/services/APIs';
 import { useNavigate } from 'react-router-dom';
 import StarsRating from '../utils/shared/StarsRating';
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addProducts } from '../utils/store/slices/Products';
+import Loading from './Loading';
 
 function HomePage() {
     const [products, setProducts] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     // const [error, setError] = useState(null);
     const navigate = useNavigate();
     const dispatch = useDispatch()
@@ -20,10 +21,10 @@ function HomePage() {
         fetchProducts()
             .then(response => {
                 setProducts(response.data);
-                // setLoading(false);
+                setLoading(false);
             })
             .catch(error => {
-                // setLoading(false);
+                setLoading(false);
                 // setError(error.message);
             });
     }, []);
@@ -39,6 +40,9 @@ function HomePage() {
 
 
     return (<>
+
+        {loading && <Loading />}
+
         <div className="ps-5 py-3 bg-black text-light">
             <h6>Home / Products </h6>
         </div>
@@ -63,7 +67,7 @@ function HomePage() {
                                 </div>
                                 <span className='secondary-color fw-semibold'>{product.price} EGP</span>
                                 <section className='col-12 d-flex justify-content-between p-0'>
-                                    <a className="btn btn-dark" onClick={()=>dispatch(addProducts(product))} >ADD TO CART</a>
+                                    <a className="btn btn-dark" onClick={() => dispatch(addProducts(product))} >ADD TO CART</a>
                                     <button className='border-0 rounded-3'>
                                         <FontAwesomeIcon className='' icon={faHeart} />
                                     </button>

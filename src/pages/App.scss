@@ -81,3 +81,14 @@ $secondary-color: #DC3545;
     right: 50%;
     transform: translate(50%, -50%);
 }
+
+.spinner-border {
+    width: 5rem !important;
+    height: 5rem !important;
+    font-size: 35px !important;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    // transform: translate(50%, -50%);
+    z-index: 1;
+}
